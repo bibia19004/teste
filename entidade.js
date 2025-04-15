@@ -36,6 +36,9 @@ class Projeteis {
     }
     atirar (x, y){
         this.lista.push(new Entidade(x + 15, y, 10, 10, 'yellow'));
-
+    }
+    atualizar(){
+        this.lista.forEach(p => p.y -= 5);
+        this.lista - this.lista.filter(p => p.y > 0);
     }
 }
